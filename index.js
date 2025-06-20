@@ -76,7 +76,7 @@ app.post("/api/products", (req, res) => {
     VALUES (?, ?)
   `);
   const info = stmt.run(name, price);
-  res.status(201).json({ id: info.lastInstertRowid });
+  res.status(201).json({ id: info.lastInsertRowid });
 });
 
 app.put("/api/products/:id", (req, res) => {
