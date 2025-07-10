@@ -73,7 +73,6 @@ app.post("/api/products", (req, res) => {
   
   const { name, price: priceStr, sizes } = req.body;
   const price = Number(priceStr);
-  // if (!Array.isArray(sizes)) return res.status(400).json({ error: "sizes must be array"});
     
   if (!name || isNaN(price) || price < 0) {
     return res.status(400).json({error: "invalid product data"})
